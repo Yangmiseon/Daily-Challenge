@@ -3,25 +3,13 @@ package ver_4;
 import java.util.Scanner;
 
 public class PhoneBookManager {
-	
-		/*배열을 이용해서 프로그램 사용자가 입력하는 정보가 최대 100개까지 유지되도록 프로그램을 변경. 
-		아래기능 삽입
-		저장 : 이름, 전화번호, 생년월일 정보를 대상으로 하는 저장
-		검색 : 이름을 기준으로 데이터를 찾아서 해당 데이터의 정보를 출력
-		삭제 : 이름을 기준으로 데이터를 찾아서 해당 데이터를 삭제
-		데이터 삭제 후 남아있는 데이터 처리는 데이터를 빈 공란이 없이 
-		순차적으로 재정리 2번이 삭제되었다면 3번 이후 데이터들의 주소 값이 -1 처리되어 재저장.
-		 */
-
-
-			
+				
 			PhoneInfor[] pBooks;
 			int cnt;
 			Scanner sc;
 			
 			
-			PhoneBookManager(int num) {
-				
+			private PhoneBookManager(int num) {
 				//배열 초기화
 				pBooks = new PhoneInfor[num];
 				//저장개수 초기화
@@ -30,6 +18,12 @@ public class PhoneBookManager {
 				sc = new Scanner(System.in);
 				
 			}
+			private static PhoneBookManager manager = new PhoneBookManager(100);
+			
+			public static PhoneBookManager getInstance() {
+				return manager;
+			}
+			
 			
 			//배열추가
 			void addInfo(PhoneInfor info) {
@@ -46,7 +40,7 @@ public class PhoneBookManager {
 			void createInstanse() {
 			
 				System.out.println("원하시는 입력정보를 선택해주세요");
-				System.out.println("1.일반 2.대학 3.회사");
+				System.out.println("1.일반 2.대학 3.회사 4.동호회");
 				int selectNum = Integer.parseInt(sc.nextLine());
 				
 				//일반친구의 정보입력
@@ -57,13 +51,13 @@ public class PhoneBookManager {
 				String phoneNumber = sc.nextLine();
 				
 				System.out.println("생일을 입력해 주세요. >> ");
-				String birthday = sc.nextLine();
+				String email = sc.nextLine();
 				
 				PhoneInfor info = null;
 					
 				switch(selectNum) {
 				case 1:
-					info = new PhoneInfor(name, phoneNumber);
+					info = new PhoneInfor(name, phoneNumber, email);
 					break;
 				case 2:
 					System.out.println("전공 입력하기");
@@ -71,14 +65,14 @@ public class PhoneBookManager {
 					System.out.println("학년(숫자) 입력하기");
 					String year = sc.nextLine();	
 					
-					info = new PhoneUnivInfor(name, phoneNumber, birthday, major, year);
+					info = new PhoneUnivInfor(name, phoneNumber, email, major, year);
 					break;
 					
 				case 3:
 					System.out.println("직업 입력하기");
 					String company =  sc.nextLine();
 												
-					info = new PhoneCompaanyInfor(name, phoneNumber, birthday, company);
+					info = new PhoneCompaanyInfor(name, phoneNumber, email, company);
 					break;
 					}
 					

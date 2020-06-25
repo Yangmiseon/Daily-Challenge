@@ -5,33 +5,19 @@ public class PhoneUnivInfor extends PhoneInfor {
 
 	String year; // 친구의 학년
 	
-	public PhoneUnivInfor(String name, String phoneNumber, String birthday, String major, String year) {
-		super(name, phoneNumber, birthday);
+	public PhoneUnivInfor(String name, String phoneNumber, String email, String major, String year) {
+		super(name, phoneNumber,email);
 		this.major = major;
 		this.year = year;
 	}
 	
-	
-
-	public PhoneUnivInfor(String name, String phoneNumber,String major, String year) {
-		super(name, phoneNumber);
-		this.major = major;
-		this.year = year;
-	}
-
-
 
 	@Override
-	void showAll() {
-	
-		super.showAll();//상속한거 출력
+	public void showAll() {
+		showInfo();
 		System.out.println("전공 : "+major);
 		System.out.println("학년 : "+ year);
+		
 	}
 
-	@Override
-	boolean checkName(String name) {
-		// TODO Auto-generated method stub
-		return super.checkName(name);
-	}
 }
