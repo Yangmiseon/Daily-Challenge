@@ -108,13 +108,24 @@ public class Ex01 {
 		
 		
 		//양의 정수를 입력하고 자릿수를 출력하는 프로그램
+//		int a;
+//		do {
+//			System.out.println("a: ");
+//			a=number.nextInt();
+//		}while(a<0); 
+//			
+//		int length = (int)(Math.log10(a)+1);
+//		System.out.println(length+"자릿수 입니다.");
+		
+		//두자리숫자 입력받기
 		int a;
+		System.out.println("두자리수를 입력하세요");
 		do {
 			System.out.println("a: ");
 			a=number.nextInt();
-		}while(a>0); 
+		}while(a<10 || a>99); 
 			
-		
+		System.out.println(a);
 			
 	}
 	
