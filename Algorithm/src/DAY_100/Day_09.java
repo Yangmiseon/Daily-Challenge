@@ -1,0 +1,65 @@
+package DAY_100;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
+public class Day_09 {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		StringTokenizer st;
+		
+		StringBuilder sb = new StringBuilder();
+		String s=" ";
+		
+		//공백이 들어오면 멈춤
+		while((s=br.readLine()) != null) {
+			
+			st = new StringTokenizer(s," ");
+			
+			int a = Integer.parseInt(st.nextToken());
+			int b = Integer.parseInt(st.nextToken());
+			
+			sb.append(a+b).append('\n');
+			
+		}
+					
+//		while(true) {
+//			st = new StringTokenizer(br.readLine()," ");
+//			
+//			int a = Integer.parseInt(st.nextToken());
+//			int b = Integer.parseInt(st.nextToken());
+//		
+//          //0  0이 들어오면 멈춤
+//			if(a==0 && b==0) {
+//				break;
+//			}
+//			sb.append((a+b)).append('\n');
+//		}
+		
+		System.out.println(sb);
+		
+		//num의 숫자 만큼 숫자 a를 받고 check에 넣은 숫자를 기준으로 
+		//check보다 작은 숫자 a를 뽑는다.
+//		int num = Integer.parseInt(st.nextToken());
+//		int check = Integer.parseInt(st.nextToken());
+//		st = new StringTokenizer(br.readLine());
+//		for(int i=0; i<num; i++) {
+//			
+//			int a = Integer.parseInt(st.nextToken());
+//			if(a<check) {
+//				bw.write(a+" ");
+//			}
+//		}
+//		
+//		bw.flush();
+	}
+
+}
