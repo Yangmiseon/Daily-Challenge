@@ -11,17 +11,8 @@ public class Day_22 {
 	public static void main(String[] args) throws IOException {
 
 		Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine().trim(); //앞뒤 공백을 제거하기위한 trim()메서드사용
-         
-        if (s.isEmpty()) {//입력값의 없을때처리
-            System.out.println(0);
-        } else {
-            System.out.println(s.split(" ").length); //구분자 split("")으로 나누어 길이출력
-        }
-        
-        
-        
-        
+		
+		 
         String a = sc.nextLine();
         int cnt=0;
         String word = "";
@@ -44,6 +35,16 @@ public class Day_22 {
       	 
         }
         System.out.println(cnt);
+        
+        
+        //여기서부턴 다 찾아본거
+        String s = sc.nextLine().trim(); //앞뒤 공백을 제거하기위한 trim()메서드사용
+         
+        if (s.isEmpty()) {//입력값의 없을때처리
+            System.out.println(0);
+        } else {
+            System.out.println(s.split(" ").length); //구분자 split("")으로 나누어 길이출력
+        }
         
         
         //StringTokenizer 을 사용하여 분리 기준을 공백으로 지정해주면 공백을 기준으로 나뉘어 토큰에 저장해주는 것이다.
