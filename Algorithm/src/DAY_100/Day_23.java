@@ -18,6 +18,7 @@ public class Day_23 {
 		int a= sc.nextInt();
  		int b=sc.nextInt();
 		
+ 		//StringBuilder를 생성해서 append에 값을 넣어 reverse로 문자열을 뒤집고 문자열 반환을 위해 toString한다
 		a = Integer.parseInt(new StringBuilder().append(a).reverse().toString());
 		b = Integer.parseInt(new StringBuilder().append(b).reverse().toString());
 		
