@@ -16,10 +16,27 @@ public class Day_28 {
 		
 		Scanner sc = new Scanner(System.in);
 		int sugar = sc.nextInt();
-		int sum=-1;
+		int sum=0;
 		
-		
-		System.out.println(sum);
+		if(sugar <5) {
+			System.out.println("-1");
+		}else {
+			while(true) {
+				sum=sugar/5;
+				System.out.println("1번"+sum);
+				if(sugar%5>3) {
+					
+					sum += ((sugar%5)/3)+1;
+					System.out.println("2번"+sum);
+					break;
+				}else {
+					sum +=1;
+					break;
+				}
+				
+			}
+			System.out.println(sum);
+		}
 	}
 
 }
