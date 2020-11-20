@@ -18,25 +18,26 @@ public class Day_28 {
 		int sugar = sc.nextInt();
 		int sum=0;
 		
+		//설탕의 킬로그램이 5보다 작을때
 		if(sugar <5) {
 			System.out.println("-1");
-		}else {
-			while(true) {
-				sum=sugar/5;
-				System.out.println("1번"+sum);
-				if(sugar%5>3) {
-					
-					sum += ((sugar%5)/3)+1;
-					System.out.println("2번"+sum);
-					break;
-				}else {
-					sum +=1;
-					break;
-				}
+		}else {//5보다 클때
+			
+			if((sugar%5) > 3 || (sugar%5) < 3) {
+				
+				sum=(sugar/5)+((sugar%5)/3)+1;
+				
+			}else{
+				sum = (sugar/5)+((sugar%5)/3);
 				
 			}
 			System.out.println(sum);
 		}
+		
+		
+		
+		//다른사람코드
+		//5의 배수 + 3의 자리는 5의 배수에 있던 값의 +1 개수가 되는것
 	}
 
 }
