@@ -27,6 +27,8 @@ public class Day_39 {
 						cnt = 0;
 						a = false;
 
+					}else {
+						System.out.println("i"+i);
 					}
 
 				}
