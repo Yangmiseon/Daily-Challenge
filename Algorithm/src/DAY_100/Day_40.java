@@ -11,8 +11,8 @@ public class Day_40 {
 
 		Scanner sc = new Scanner(System.in); 
 		int m = sc.nextInt(); 
-		int n = sc.nextInt(); 
 		
+		int n = sc.nextInt(); 
 		List<Boolean> list = new ArrayList<>();
 		list.add(false);
 		list.add(false);
@@ -36,7 +36,6 @@ public class Day_40 {
 				System.out.println(i);
 			}
 		}
-		
 		
 		
 	}
